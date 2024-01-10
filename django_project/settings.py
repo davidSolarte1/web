@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local
     "accounts.apps.AccountsConfig", # new
-    # "pages.apps.PagesConfig", # new
+    "pages.apps.PagesConfig", # new
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser" # new
@@ -59,8 +59,7 @@ ROOT_URLCONF = 'django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        # BASE_DIR / "templates"
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
